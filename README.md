@@ -1,21 +1,51 @@
-# 中文版本的ai地牢（基于ChatGPT版本）
+# The Chinese version of the ai dungeon (based on the ChatGPT version) 
+ 
+ 2 
+ 
+
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/bupticybee/ChineseAiDungeonChatGPT/blob/main/Example.ipynb)
 [![Python3.9](https://img.shields.io/badge/python-3.9-blue.svg)](https://img.shields.io/badge/python-3.9-blue.svg)
 
 ![storysample](outputs/story.gif)
 
-## 介绍
-
-中文版的ai地牢，直接使用的openai的ChatGPT api作为讲故事的模型。
-
-我已经不知道说什么了，我只是写了40行代码，花了1个小时，这个版本的中文ai地牢讲故事的能力比我之前花了一个月训练的 [ChineseAiDungeon](https://github.com/bupticybee/ChineseAiDungeon) 好了不止一个数量级。 并且它甚至不需要finetune。模型效果显著比清华开源的清源CPM好的多得多。
-
-我感觉chat gpt讲故事的能力已经直接逼近ai地牢本身了。科技的进步，令人恐怖。
-
-## 安装和使用
-
-直接下载项目，然后
+## Introduction 13 
+ 
+  
+ 
+ 14 
+ 
+ The Chinese version of the ai dungeon directly uses openai's ChatGPT api as a storytelling model. 
+ 
+ 15 
+ 
+  
+ 
+ 16 
+ 
+ I don't know what to say anymore, I just wrote 40 lines of code and spent 1 hour. The storytelling ability of this version of the Chinese ai dungeon is better than that of [ChineseAiDungeon](https://github .com/bupticybee/ChineseAiDungeon) more than an order of magnitude better. And it doesn't even require finetune. The effect of the model is significantly better than Qingyuan CPM, which is open sourced by Tsinghua University. 
+ 
+ 17 
+ 
+  
+ 
+ 18 
+ 
+ I feel that chat gpt's ability to tell stories has directly approached the ai dungeon itself. The advancement of technology is terrifying. 
+ 
+ 19 
+ 
+  
+ 
+ 20 
+ 
+ ## Install and use 21 
+ 
+  
+ 
+ twenty two 
+ 
+ Download the project directly, then
 
 ```shell
 pip3 install -r requirements.txt
@@ -60,12 +90,19 @@ pip3 install --upgrade revChatGPT
 python3 example_story.py
 ```
 运行即可。确保已经将`revChatGPT`包升级到最新版。为了保证稳定性，原本的使用session_token的方式已被放弃，仅支持使用OpenAI的帐号进行登陆。  
+In addition to the api update, the following content has also been updated: 
 
-除去api更新，还更新了以下内容:
-1. cli界面更新，更加美观。
-2. 增加自动保存，读取功能。
+ 
+ 1. The cli interface is updated and more beautiful. 
 
-GUI版本尚未更新，将会尽快更新并恢复使用。
+ 
+ 2. Add auto save and read function。
+
+The GUI version has not been updated yet and will be updated and restored as soon as possible. 
+ 
+
+ 
+
 
 ---
 
@@ -87,7 +124,7 @@ GUI版本尚未更新，将会尽快更新并恢复使用。
 其中一个故事,这一个故事里边，我在一个洞穴里迷路了，然后机智的凭借回城卷轴回了村子。
 
 ```text
-你在树林里冒险，指不定会从哪里蹦出来一些奇怪的东西，你握紧手上的手枪，希望这次冒险能够找到一些值钱的
+你在树林里冒险，Some weird stuff popping out of nowhere，你握紧手上的手枪，希望这次冒险能够找到一些值钱的
 东西，你往树林深处走去。
 > 你穿好伪装衣，这样敌人很难发现自己
 你走了几步之后，感觉身后有什么东西在跟着你。你转身一看，发现是一只巨大的熊。你立刻拔出手枪，准备向它
@@ -143,11 +180,12 @@ GUI版本尚未更新，将会尽快更新并恢复使用。
 
 1. err TypeError: 'generator' object is not subscriptable
 
-见 [#1](https://github.com/bupticybee/ChineseAiDungeonChatGPT/issues/1) ，尝试 `pip3 install revChatGPT --upgrade`升级依赖
-
+See [#1](https://github.com/bupticybee/ChineseAiDungeonChatGPT/issues/1), try `pip3 install revChatGPT --upgrade` to upgrade dependencies
 2. response = response.text.splitlines()[-4]  IndexError: list index out of rang
 
-一般是接口太多人调用挂了，等openai修复就好，或者接口更新导致无效之类的，这个时候一般更新revChatGPT可以解决
+Generally, too many people call the interface and hang up, wait for openai to fix it, or the interface update makes it invalid, etc. At this time, generally updating revChatGPT can solve 181 
+ 
+
 
 3. ValueError: Error refreshing session: No email and password provided
 
